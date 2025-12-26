@@ -1,4 +1,4 @@
-{ lib, home-manager, ... }:
+{ lib, pkgs, home-manager, ... }:
 
 {
   options = {
@@ -9,6 +9,10 @@
 
   config = {
     programs.hyprland.enable = true;
+    environment.systemPackages = with pkgs; [
+      vim
+      git
+    ];
     home-manager.useGlobalPkgs = true;
     home-manager.useUserPackages = true;
 
