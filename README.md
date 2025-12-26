@@ -274,3 +274,31 @@ home-manager switch --flake .#youruser           # User config
 
 !!REQ!!
 
+# Power Management
+
+!!REQ!!
+
+**Laptop Support:**
+- TLP - Advanced power management
+- Battery optimization profiles
+- CPU frequency scaling
+- Auto-sleep on lid close
+
+**Waybar Integration:**
+- Battery module with percentage and status
+- Charging indicator
+- Time remaining estimate
+- Power profile switcher (click to change)
+
+**Screen & Sleep:**
+- Auto-screen timeout (configurable)
+- Automatic suspend on idle
+- Lock on lid close
+- Wake on keyboard/mouse
+
+**Brightness Control:**
+- Brightness keys with on-screen popup
+- Automatic brightness (optional)
+- Night light/blue light filter (Hyprsunset/Gammastep)
+
+!!REQ!!
