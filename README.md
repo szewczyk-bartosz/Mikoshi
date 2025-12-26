@@ -118,3 +118,32 @@ Themes need to be applied to the following automatically:
 - Language servers for common languages
 
 !!REQ!!
+
+# Applications
+
+!!REQ!!
+
+**Web Browsers:**
+- Brave - Privacy-focused, Chromium-based
+- qutebrowser - Keyboard-driven, minimal
+
+**Media:**
+- Zathura - PDF viewer (keyboard-driven)
+- imv - Image viewer
+- VLC - Video player
+- Custom music player - TUI-based (to be developed)
+
+**Productivity:**
+- KeePassXC - Password manager (local, no cloud)
+- Obsidian - Note-taking and knowledge management
+
+**Graphics & Recording:**
+- GIMP - Image editing
+- OBS Studio - Screen recording and streaming
+
+**System Tools:**
+- Archive tools - p7zip, unzip, unrar (CLI only)
+- CopyQ - Clipboard manager (with encryption support)
+- hyprpicker - Color picker
+
+!!REQ!!
