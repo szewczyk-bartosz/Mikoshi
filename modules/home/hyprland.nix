@@ -14,7 +14,7 @@ in
         "$mainMod, J, movefocus, d"
         "$mainMod, K, movefocus, u"
         "$mainMod, L, movefocus, r"
-      ];
+      ]
       ++ (map (i: "SUPER, ${toString i}, workspace, ${toString i}") workspaces)
       ++ (map (i: "SUPER SHIFT, ${toString i}, movetoworkspace, ${toString i}") workspaces);
       general = {
