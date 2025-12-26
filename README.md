@@ -167,3 +167,64 @@ home-manager switch --flake .#youruser           # User config
 - hyprpicker - Color picker
 
 !!REQ!!
+
+
+# Development Tools
+
+!!REQ!!
+
+**Languages & Toolchains:**
+- Nix/NixOS tooling (built-in)
+- Rust (rustc, cargo, rust-analyzer)
+- Python (python3, pip, pyright LSP)
+
+**Version Management:**
+- direnv - Auto-load project environments
+- nix-direnv - Faster direnv for Nix projects
+
+**Editor (NixVim):**
+- Pre-configured Neovim via NixVim
+- LSP support for Rust and Python
+- Tree-sitter syntax highlighting
+- Fuzzy finding (Telescope)
+- File explorer (Neo-tree or nvim-tree)
+- Git integration (Gitsigns, Fugitive)
+- Auto-completion (nvim-cmp)
+- Snippets
+- Cyberpunk-themed (matches system theme)
+
+**Git Configuration:**
+- Sensible defaults
+- Delta (better git diff)
+- Lazygit (TUI git interface)
+
+**Debugging:**
+- GDB
+- LLDB
+
+!!REQ!!
+
+
+# Audio & Bluetooth
+
+!!REQ!!
+
+**Audio System:**
+- PipeWire - Modern audio server (replaces PulseAudio/JACK)
+- WirePlumber - PipeWire session manager
+- pavucontrol - GUI volume control and audio device management
+- Audio controls via media keys with on-screen popup
+
+**Bluetooth:**
+- BlueZ - Bluetooth stack
+- blueman - GUI Bluetooth manager (system tray applet)
+- Bluetooth audio support (A2DP profiles)
+- Easy pairing and device management via GUI
+
+**Waybar Integration:**
+- Audio module showing volume level
+- Click to open pavucontrol
+- Bluetooth module showing connection status
+- Click to open blueman
+
+!!REQ!!
