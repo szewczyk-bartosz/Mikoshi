@@ -302,3 +302,30 @@ home-manager switch --flake .#youruser           # User config
 - Night light/blue light filter (Hyprsunset/Gammastep)
 
 !!REQ!!
+
+# Hardware Support
+
+!!REQ!!
+
+**Graphics Drivers:**
+- Intel - Automatic detection and configuration
+- AMD - AMDGPU drivers with Vulkan support
+- NVIDIA - Optional module (user enables if needed)
+
+**Input Devices:**
+- libinput - Touchpad and mouse configuration
+- Touchpad gestures (multi-touch support)
+- Natural scrolling (configurable)
+- Tap-to-click enabled by default
+
+**Monitor Support:**
+- Multi-monitor detection
+- Automatic DPI scaling
+- HiDPI support (configurable per monitor)
+- Display configuration via Hyprland
+
+**Printing:**
+- CUPS - Printing system (optional module)
+- Network printer discovery
+
+!!REQ!!
