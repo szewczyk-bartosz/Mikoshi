@@ -252,3 +252,25 @@ home-manager switch --flake .#youruser           # User config
 - WireGuard support
 
 !!REQ!!
+
+# Fonts
+
+!!REQ!!
+
+**System Fonts:**
+- Nerd Fonts - Icons and glyphs for terminal/waybar
+- JetBrainsMono Nerd Font - Default monospace
+- Inter - Default sans-serif
+- Noto fonts - Comprehensive Unicode coverage
+
+**Special Support:**
+- Emoji fonts (Noto Color Emoji)
+- Japanese/Chinese/Korean fonts (Noto CJK)
+- Font rendering optimization (FreeType)
+
+**Theme Integration:**
+- Fonts automatically themed across all applications
+- Consistent sizing and rendering
+
+!!REQ!!
+
