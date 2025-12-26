@@ -50,4 +50,41 @@ Themes need to be applied to the following automatically:
  Icon theme
 !!REQ!!
 
+# Keybindings
 
+!!REQ!!
+
+**Universal Clipboard:**
+- `Ctrl + C` / `Ctrl + V` - Copy/Paste everywhere (terminal included)
+
+**Window Management:**
+- `Super + H/J/K/L` - Move focus between windows (Vim-style)
+- `Super + Shift + H/J/K/L` - Move windows around
+- `Super + Q` - Close window
+- `Super + F` - Toggle fullscreen
+- `Super + V` - Toggle floating mode
+
+**Workspaces:**
+- `Super + [1-9]` - Switch to workspace
+- `Super + Shift + [1-9]` - Move window to workspace
+- `Super + Tab` - Switch between recent windows (Hyprshell)
+
+**Launchers & Tools:**
+- `Super + Return` - Launch terminal
+- `Super + Space` - Application launcher
+- `Super + Shift + S` - Screenshot
+- `Super + L` - Lock screen
+- `Super + E` - File manager
+
+**System:**
+- `Super + Shift + E` - Exit/logout menu
+- `Super + Shift + R` - Reload Hyprland config
+
+**Volume & Brightness:**
+- `XF86AudioRaiseVolume/LowerVolume` - Volume control (with popup)
+- `XF86MonBrightnessUp/Down` - Brightness control (with popup)
+
+**Theme:**
+- `Super + Ctrl + T` - Theme switcher menu
+
+!!REQ!!
