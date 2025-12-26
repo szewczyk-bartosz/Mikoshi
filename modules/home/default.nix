@@ -1,7 +1,7 @@
 { username, hostname, theme, ... }:
 
 let
-  themes = import ../../themes/;
+  themes = import ../../themes;
   selectedTheme = themes.${theme};
 in 
 {
