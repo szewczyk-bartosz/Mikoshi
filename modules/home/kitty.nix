@@ -1,0 +1,29 @@
+{ selectedTheme, ... }:
+{
+  programs.kitty = {
+    enable = true;
+    settings = {
+      foreground = selectedTheme.colours.fg;
+      background = selectedTheme.colours.bg;
+
+      color0 = selectedTheme.colours.terminal.black;
+      color1 = selectedTheme.colours.terminal.red;
+      color2 = selectedTheme.colours.terminal.green;
+      color3 = selectedTheme.colours.terminal.yellow;
+      color4 = selectedTheme.colours.terminal.blue;
+      color5 = selectedTheme.colours.terminal.magenta;
+      color6 = selectedTheme.colours.terminal.cyan;
+      color7 = selectedTheme.colours.terminal.white;
+      color8 = selectedTheme.colours.terminal.brightBlack;
+      color9 = selectedTheme.colours.terminal.brightRed;
+      color10 = selectedTheme.colours.terminal.brightGreen;
+      color11 = selectedTheme.colours.terminal.brightYellow;
+      color12 = selectedTheme.colours.terminal.brightBlue;
+      color13 = selectedTheme.colours.terminal.brightMagenta;
+      color14 = selectedTheme.colours.terminal.brightCyan;
+      color15 = selectedTheme.colours.terminal.brightWhite;
+    };
+
+  };
+
+}
