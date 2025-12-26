@@ -228,3 +228,27 @@ home-manager switch --flake .#youruser           # User config
 - Click to open blueman
 
 !!REQ!!
+
+
+# Networking
+
+!!REQ!!
+
+**Network Management:**
+- NetworkManager - Network connection management
+- nm-applet - System tray network applet
+- GUI WiFi connection and management
+- Ethernet auto-configuration
+
+**Waybar Integration:**
+- Network module showing connection status
+- WiFi signal strength indicator
+- Click to open network menu
+- Easy WiFi switching via mouse
+
+**VPN Support:**
+- NetworkManager VPN plugins
+- OpenVPN support
+- WireGuard support
+
+!!REQ!!
