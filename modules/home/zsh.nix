@@ -39,6 +39,13 @@
 
       # Case-insensitive completion
       zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
+      # Disable underlining in syntax highlighting
+      typeset -A ZSH_HIGHLIGHT_STYLES
+      ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
+      ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=cyan'
+      ZSH_HIGHLIGHT_STYLES[precommand]='fg=green'
+      ZSH_HIGHLIGHT_STYLES[autodirectory]='fg=cyan'
     '';
   };
 
