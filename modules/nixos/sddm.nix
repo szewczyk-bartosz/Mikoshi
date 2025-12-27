@@ -9,7 +9,7 @@ let
     name = "mikoshi-sddm-theme";
     src = ../../sddm-theme;
 
-    buildInputs = [ pkgs.libsForQt5.qt5.qtgraphicaleffects ];
+    dontWrapQtApps = true;
 
     installPhase = ''
       mkdir -p $out/share/sddm/themes/mikoshi
