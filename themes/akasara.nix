@@ -14,13 +14,13 @@
 
     # Semantic
     success = "#00ff88";
-    warning = "#ffaa00";
+    warning = "#ff0055";
     error = "#ff0055";
     info = "#00d9ff";
 
     # UI
     border = "#ff0080";
-    selection = "#ff0080";
+    selection = "#cc0066";
     hover = "#ff0080";
 
     # Contrasting text colors for use on accent backgrounds
@@ -35,7 +35,7 @@
       black = "#0a0a0a";
       red = "#ff0055";
       green = "#00ff88";
-      yellow = "#ffaa00";
+      yellow = "#ff3388";
       blue = "#00d9ff";
       magenta = "#ff0080";
       cyan = "#00d9ff";
@@ -53,8 +53,8 @@
   };
 
   fonts = {
-    main = "3270 Nerd Font Mono";
-    mono = "3270 Nerd Font Mono";
+    main = "EnvyCodeR Nerd Font Mono";
+    mono = "EnvyCodeR Nerd Font Mono";
     size = 11;
   };
 
