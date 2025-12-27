@@ -21,10 +21,9 @@
         }:
         {
           imports = [
-            import ./modules/nixos/default.nix
+            (import ./modules/nixos/default.nix)
           ];
-          options.mikoshi = (import ./config.nix lib).mikoshiOptions;
-
+          options.mikoshi = (import ./options.nix lib).mikoshiOptions;
           config = {
               nixpkgs.config.allowUnfree = true;
           };
@@ -43,13 +42,11 @@
       }:
       {
         imports = [
-          import ./modules/home/default.nix
+          (import ./modules/home/default.nix)
         ];
-        options.mikoshi = (import ./config.nix lib).mikoshiOptions;
+        options.mikoshi = (import ./options.nix lib).mikoshiOptions;
         config.mikoshi = osConfig.mikoshi;
       };
     };
-    nixosModules.default = import ./modules/nixos;
-    homeManagerModules.default = import ./modules/home;
   };
 }

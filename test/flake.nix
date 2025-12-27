@@ -23,10 +23,11 @@
         ./hardware-configuration.nix
         {
           mikoshi.theme = "akasara";
+	  home-manager.users.cheryllamb = {
+	    imports = [ mikoshi.homeManagerModules.default ];
+	    home.stateVersion = "26.05";
+	  };
         }
-        home-manager.users.cheryllamb = {
-            imports = [ mikoshi.homeManagerModules.default ];
-          }
       ];
     };
   };

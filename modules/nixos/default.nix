@@ -1,4 +1,4 @@
-{ lib, pkgs, config, home-manager, ... }:
+{ pkgs, config, ... }:
 
 {
   config = {
