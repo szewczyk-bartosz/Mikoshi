@@ -40,6 +40,9 @@ in
           format = "{name}";
           on-click = "activate";
           sort-by-number = true;
+          persistent-workspaces = {
+            "*" = [ 1 2 3 4 ];
+          };
         };
 
         "custom/separator" = {

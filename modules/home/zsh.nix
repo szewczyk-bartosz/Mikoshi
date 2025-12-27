@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
 {
+  # Set zsh as the default shell
+  home.sessionVariables = {
+    SHELL = "${pkgs.zsh}/bin/zsh";
+  };
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
