@@ -41,6 +41,7 @@ in
     settings = {
       Theme = {
         Current = "mikoshi";
+        ThemeDir = "${mikoshiTheme}/share/sddm/themes";
         CursorTheme = selectedTheme.cursor;
         Font = selectedTheme.fonts.main;
       };
