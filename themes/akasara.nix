@@ -1,6 +1,6 @@
 {
   name = "Akasara";
-  
+
   colours = {
     bg = "#0a0a0a";
     bgAlt = "#1a1a1a";
@@ -20,8 +20,8 @@
 
     # UI
     border = "#ff0080";
-    selection = "#ff008044";
-    hover = "#ff008066";
+    selection = "#ff8044";
+    hover = "#ff8066";
 
     # Contrasting text colors for use on accent backgrounds
     onPrimary = "#0a0a0a";
@@ -30,7 +30,7 @@
     onSuccess = "#0a0a0a";
     onWarning = "#0a0a0a";
     onError = "#ffffff";
-    
+
     terminal = {
       black = "#0a0a0a";
       red = "#ff0055";
@@ -51,13 +51,13 @@
       brightWhite = "#ffffff";
     };
   };
-  
+
   fonts = {
     main = "JetBrainsMono Nerd Font";
     mono = "JetBrainsMono Nerd Font Mono";
     size = 11;
   };
-  
+
   cursor = "Bibata-Modern-Classic";
   icon = "Papirus-Dark";
 }

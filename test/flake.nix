@@ -22,7 +22,7 @@
         ./configuration.nix
         ./hardware-configuration.nix
         {
-          mikoshi.theme = "sane";
+          mikoshi.theme = "akasara";
           mikoshi.git.userEmail = "cheryllamb123098@protonmail.com";
           mikoshi.git.userName = "szewczyk-bartosz";
           home-manager.users.cheryllamb = {
