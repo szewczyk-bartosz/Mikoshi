@@ -102,6 +102,9 @@ in
             show_buffer_close_icons = true;
             show_close_icon = false;
             always_show_bufferline = true;
+            indicator = {
+              style = "icon";
+            };
             diagnostics_indicator = ''
               function(count, level, diagnostics_dict, context)
                 local s = " "
@@ -190,6 +193,67 @@ in
         stages = "fade_in_slide_out";
       };
 
+      # Noice - centered command line and better UI
+      noice = {
+        enable = true;
+        settings = {
+          cmdline = {
+            enabled = true;
+            view = "cmdline_popup";
+          };
+          messages = {
+            enabled = true;
+          };
+          popupmenu = {
+            enabled = true;
+            backend = "nui";
+          };
+          notify = {
+            enabled = true;
+          };
+          lsp = {
+            override = {
+              "vim.lsp.util.convert_input_to_markdown_lines" = true;
+              "vim.lsp.util.stylize_markdown" = true;
+              "cmp.entry.get_documentation" = true;
+            };
+            progress = {
+              enabled = true;
+            };
+          };
+          presets = {
+            bottom_search = true;
+            command_palette = true;
+            long_message_to_split = true;
+            inc_rename = false;
+            lsp_doc_border = true;
+          };
+          views = {
+            cmdline_popup = {
+              position = {
+                row = "50%";
+                col = "50%";
+              };
+              size = {
+                width = 60;
+                height = "auto";
+              };
+            };
+            popupmenu = {
+              relative = "editor";
+              position = {
+                row = "60%";
+                col = "50%";
+              };
+              size = {
+                width = 60;
+                height = 10;
+              };
+            };
+          };
+        };
+      };
+
       # Colorize color codes
       nvim-colorizer = {
         enable = true;
@@ -209,37 +273,131 @@ in
     # Custom bufferline highlights applied via extraConfigLua
     extraConfigLua = ''
       -- Set bufferline highlights for selected tabs
+      local primary = '${selectedTheme.colours.primary}'
+      local onPrimary = '${selectedTheme.colours.onPrimary}'
+
+      -- Main buffer/tab elements
       vim.api.nvim_set_hl(0, 'BufferLineBufferSelected', {
-        fg = '${selectedTheme.colours.onPrimary}',
-        bg = '${selectedTheme.colours.primary}',
+        fg = onPrimary,
+        bg = primary,
         bold = true
       })
       vim.api.nvim_set_hl(0, 'BufferLineTabSelected', {
-        fg = '${selectedTheme.colours.onPrimary}',
-        bg = '${selectedTheme.colours.primary}',
+        fg = onPrimary,
+        bg = primary,
         bold = true
       })
+
+      -- Icon and file type (set all DevIcon variants)
+      vim.api.nvim_set_hl(0, 'BufferLineDevIconSelected', {
+        fg = onPrimary,
+        bg = primary
+      })
+
+      -- Set all possible DevIcon variants for different file types
+      local filetypes = {
+        'Lua', 'Nix', 'Rust', 'Python', 'C', 'Cpp', 'Go', 'JavaScript',
+        'TypeScript', 'Markdown', 'Json', 'Yaml', 'Toml', 'Vim', 'Bash',
+        'Default'
+      }
+      for _, ft in ipairs(filetypes) do
+        vim.api.nvim_set_hl(0, 'BufferLineDevIcon' .. ft .. 'Selected', {
+          fg = onPrimary,
+          bg = primary
+        })
+      end
+
+      -- Numbers
       vim.api.nvim_set_hl(0, 'BufferLineNumbersSelected', {
-        fg = '${selectedTheme.colours.onPrimary}',
-        bg = '${selectedTheme.colours.primary}',
+        fg = onPrimary,
+        bg = primary,
         bold = true
       })
+
+      -- Close button
       vim.api.nvim_set_hl(0, 'BufferLineCloseButtonSelected', {
-        fg = '${selectedTheme.colours.onPrimary}',
-        bg = '${selectedTheme.colours.primary}'
+        fg = onPrimary,
+        bg = primary
       })
+
+      -- Modified indicator
       vim.api.nvim_set_hl(0, 'BufferLineModifiedSelected', {
-        fg = '${selectedTheme.colours.onPrimary}',
-        bg = '${selectedTheme.colours.primary}'
+        fg = onPrimary,
+        bg = primary
       })
+
+      -- Diagnostics
       vim.api.nvim_set_hl(0, 'BufferLineDiagnosticSelected', {
-        fg = '${selectedTheme.colours.onPrimary}',
-        bg = '${selectedTheme.colours.primary}'
+        fg = onPrimary,
+        bg = primary
       })
+      vim.api.nvim_set_hl(0, 'BufferLineErrorSelected', {
+        fg = onPrimary,
+        bg = primary
+      })
+      vim.api.nvim_set_hl(0, 'BufferLineWarningSelected', {
+        fg = onPrimary,
+        bg = primary
+      })
+      vim.api.nvim_set_hl(0, 'BufferLineInfoSelected', {
+        fg = onPrimary,
+        bg = primary
+      })
+      vim.api.nvim_set_hl(0, 'BufferLineHintSelected', {
+        fg = onPrimary,
+        bg = primary
+      })
+
+      -- Separators
       vim.api.nvim_set_hl(0, 'BufferLineSeparatorSelected', {
-        fg = '${selectedTheme.colours.primary}',
-        bg = '${selectedTheme.colours.primary}'
+        fg = primary,
+        bg = primary
       })
+      vim.api.nvim_set_hl(0, 'BufferLineIndicatorSelected', {
+        fg = primary,
+        bg = primary
+      })
+
+      -- Duplicate and pick
+      vim.api.nvim_set_hl(0, 'BufferLineDuplicateSelected', {
+        fg = onPrimary,
+        bg = primary
+      })
+      vim.api.nvim_set_hl(0, 'BufferLinePickSelected', {
+        fg = onPrimary,
+        bg = primary,
+        bold = true
+      })
+
+      -- Also set "Visible" variants (for the currently focused buffer)
+      vim.api.nvim_set_hl(0, 'BufferLineBufferVisible', {
+        fg = onPrimary,
+        bg = primary,
+        bold = true
+      })
+      vim.api.nvim_set_hl(0, 'BufferLineTabVisible', {
+        fg = onPrimary,
+        bg = primary,
+        bold = true
+      })
+      vim.api.nvim_set_hl(0, 'BufferLineNumbersVisible', {
+        fg = onPrimary,
+        bg = primary
+      })
+      vim.api.nvim_set_hl(0, 'BufferLineCloseButtonVisible', {
+        fg = onPrimary,
+        bg = primary
+      })
+      vim.api.nvim_set_hl(0, 'BufferLineSeparatorVisible', {
+        fg = primary,
+        bg = primary
+      })
+      for _, ft in ipairs(filetypes) do
+        vim.api.nvim_set_hl(0, 'BufferLineDevIcon' .. ft .. 'Visible', {
+          fg = onPrimary,
+          bg = primary
+        })
+      end
     '';
   };
 }
