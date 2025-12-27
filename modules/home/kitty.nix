@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, pkgs, ... }:
 let
   themes = import ../../themes;
   selectedTheme = themes.${config.mikoshi.theme};
@@ -6,7 +6,9 @@ in
 {
   programs.kitty = {
     enable = true;
+    shellIntegration.enableZshIntegration = true;
     settings = {
+      shell = "${pkgs.zsh}/bin/zsh";
       background = selectedTheme.colours.terminal.black;
       foreground = selectedTheme.colours.terminal.white;
       background_opacity = "0.85";
