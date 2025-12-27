@@ -33,7 +33,6 @@ in
           "custom/separator"
           "temperature"
           "custom/separator"
-          "tray"
         ];
 
         "hyprland/workspaces" = {
@@ -123,7 +122,7 @@ in
         };
       };
     };
-    
+
     style = ''
       * {
         font-family: "3270 Nerd Font";

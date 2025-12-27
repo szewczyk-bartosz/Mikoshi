@@ -7,6 +7,6 @@
 
   # Auto-start CopyQ without tray icon
   wayland.windowManager.hyprland.settings.exec-once = [
-    "copyq --start-server hide"
+    "copyq --start-server"
   ];
 }
