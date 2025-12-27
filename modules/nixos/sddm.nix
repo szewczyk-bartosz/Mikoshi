@@ -4,23 +4,30 @@ let
   themes = import ../../themes;
   selectedTheme = themes.${config.mikoshi.theme};
 
-  # Build custom SDDM theme
-  mikoshiSddmTheme = pkgs.stdenv.mkDerivation {
-    name = "mikoshi-sddm-theme";
+  # Generate theme.conf content
+  themeConf = import ../../sddm-theme/theme.conf.nix {
+    theme = selectedTheme;
+    wallpaper = selectedTheme.wallpaper;
+  };
+
+  # Create the SDDM theme package
+  mikoshiTheme = pkgs.stdenv.mkDerivation {
+    name = "sddm-mikoshi-theme";
     src = ../../sddm-theme;
 
+    dontBuild = true;
     dontWrapQtApps = true;
 
     installPhase = ''
       mkdir -p $out/share/sddm/themes/mikoshi
-      cp -r $src/* $out/share/sddm/themes/mikoshi/
 
-      # Generate theme.conf with colors from selected theme
-      cat > $out/share/sddm/themes/mikoshi/theme.conf << EOF
-      ${import ../../sddm-theme/theme.conf.nix {
-        theme = selectedTheme;
-        wallpaper = "${selectedTheme.wallpaper}";
-      }}
+      # Copy QML files
+      cp $src/Main.qml $out/share/sddm/themes/mikoshi/
+      cp $src/metadata.desktop $out/share/sddm/themes/mikoshi/
+
+      # Generate theme.conf from the Nix expression
+      cat > $out/share/sddm/themes/mikoshi/theme.conf << 'EOF'
+      ${themeConf}
       EOF
     '';
   };
@@ -35,6 +42,7 @@ in
       Theme = {
         Current = "mikoshi";
         CursorTheme = selectedTheme.cursor;
+        Font = selectedTheme.fonts.main;
       };
 
       General = {
@@ -43,13 +51,10 @@ in
     };
   };
 
-  # Install custom SDDM theme and dependencies
+  # Install SDDM theme and dependencies
   environment.systemPackages = with pkgs; [
+    mikoshiTheme
     libsForQt5.qt5.qtgraphicaleffects
     libsForQt5.qt5.qtquickcontrols2
-    mikoshiSddmTheme
   ];
-
-  # Ensure SDDM can find the theme
-  environment.pathsToLink = [ "/share/sddm" ];
 }
