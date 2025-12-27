@@ -16,7 +16,6 @@ in
 
         modules-left = [
           "hyprland/workspaces"
-          "custom/separator"
         ];
         modules-center = [ "custom/grid-status" ];
         modules-right = [
