@@ -114,6 +114,37 @@ in
               end
             '';
           };
+          highlights = {
+            buffer_selected = {
+              fg = "${selectedTheme.colours.primary}";
+              bold = true;
+              italic = false;
+            };
+            numbers_selected = {
+              fg = "${selectedTheme.colours.primary}";
+              bold = true;
+            };
+            diagnostic_selected = {
+              fg = "${selectedTheme.colours.primary}";
+              bold = true;
+            };
+            hint_selected = {
+              fg = "${selectedTheme.colours.primary}";
+              bold = true;
+            };
+            info_selected = {
+              fg = "${selectedTheme.colours.primary}";
+              bold = true;
+            };
+            warning_selected = {
+              fg = "${selectedTheme.colours.primary}";
+              bold = true;
+            };
+            error_selected = {
+              fg = "${selectedTheme.colours.primary}";
+              bold = true;
+            };
+          };
         };
       };
 
