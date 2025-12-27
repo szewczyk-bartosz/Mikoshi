@@ -6,11 +6,11 @@
   services.displayManager.ly = {
     enable = true;
     settings = {
-      animation = "matrix";  # Matrix-style rain animation (very cyberpunk!)
-      # Other options: "doom" for classic doom fire
+      # No animation background
+      animation = "none";
 
-      # Custom message displayed at the top of the login box
-      box_title = "Wake the fuck up Samurai, we've got a city to burn";
+      # Custom message displayed above the login box
+      initial_info_text = "Wake the fuck up Samurai, we've got a city to burn";
     };
   };
 
