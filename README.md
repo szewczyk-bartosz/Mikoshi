@@ -14,26 +14,24 @@ For now, the README is just so I can lay out the design
 ## Core System Setup
 
 ### Flake Structure
-- [ ] Create `flake.nix` with proper inputs (nixpkgs, home-manager)
-- [ ] Define `nixosModules.default` output
-- [ ] Define `homeManagerModules.default` output
-- [ ] Set up proper module imports
-- [ ] Configure flake-utils for multi-system support
+- [*] Create `flake.nix` with proper inputs (nixpkgs, home-manager)
+- [*] Define `nixosModules.default` output
+- [*] Define `homeManagerModules.default` output
+- [*] Set up proper module imports
 
 ### Module Architecture
-- [ ] Create `modules/nixos/` directory structure
-- [ ] Create `modules/home/` directory structure
-- [ ] Create `modules/nixos/default.nix` that imports all system modules
-- [ ] Create `modules/home/default.nix` that imports all home modules
-- [ ] Define `mikoshi` option namespace
-- [ ] Create options for username, hostname, theme
+- [*] Create `modules/nixos/` directory structure
+- [*] Create `modules/home/` directory structure
+- [*] Create `modules/nixos/default.nix` that imports all system modules
+- [*] Create `modules/home/default.nix` that imports all home modules
+- [*] Define `mikoshi` option namespace
 
 ## Window Manager & Desktop Environment
 
 ### Hyprland Configuration
-- [ ] Enable Hyprland in NixOS module
+- [*] Enable Hyprland in NixOS module
 - [ ] Create Hyprland home-manager configuration
-- [ ] Configure default keybindings
+- [*] Configure default keybindings
 - [ ] Set up window rules
 - [ ] Configure workspace behavior (10 workspaces)
 - [ ] Set up gaps and borders
@@ -42,8 +40,8 @@ For now, the README is just so I can lay out the design
 - [ ] Make configuration themeable
 
 ### Waybar
-- [ ] Install and enable Waybar
-- [ ] Create base Waybar configuration
+- [*] Install and enable Waybar
+- [*] Create base Waybar configuration
 - [ ] Configure workspace module
 - [ ] Configure network module (with nm-applet integration)
 - [ ] Configure audio module (with pavucontrol integration)
@@ -55,28 +53,28 @@ For now, the README is just so I can lay out the design
 - [ ] Add pre-rendered animated icons support
 
 ### Window Switcher
-- [ ] Install Hyprshell
-- [ ] Configure Alt+Tab behavior
+- [*] Install Hyprshell
+- [*] Configure Alt+Tab behavior
 - [ ] Theme to match system theme
 
 ### Application Launcher
-- [ ] Install Wofi
-- [ ] Create base configuration
-- [ ] Configure keybinding (Super+Space)
+- [*] Install Wofi
+- [*] Create base configuration
+- [*] Configure keybinding (Super+Space)
 - [ ] Make themeable
 - [ ] Add custom CSS styling
 
 ### Notifications
-- [ ] Install Mako
-- [ ] Create base configuration
-- [ ] Configure notification timeout
-- [ ] Set up notification actions
+- [*] Install Mako
+- [*] Create base configuration
+- [*] Configure notification timeout
+- [*] Set up notification actions
 - [ ] Make themeable
 - [ ] Configure urgency levels
 
 ### Lock Screen
-- [ ] Install Hyprlock
-- [ ] Create base configuration
+- [*] Install Hyprlock
+- [*] Create base configuration
 - [ ] Add custom animations
 - [ ] Make themeable
 - [ ] Configure auto-lock timeout
@@ -97,7 +95,7 @@ For now, the README is just so I can lay out the design
 - [ ] Add notification on screenshot
 
 ### Display Manager (SDDM)
-- [ ] Enable SDDM in NixOS module
+- [*] Enable SDDM in NixOS module
 - [ ] Install SDDM theme dependencies
 - [ ] Create custom cyberpunk theme
 - [ ] Add QML animations
@@ -115,7 +113,7 @@ For now, the README is just so I can lay out the design
 - [ ] Enable ligatures
 
 ### Zsh
-- [ ] Install and set Zsh as default shell
+- [*] Install and set Zsh as default shell
 - [ ] Configure basic Zsh settings
 - [ ] Enable command history
 - [ ] Set up auto-suggestions
@@ -123,33 +121,33 @@ For now, the README is just so I can lay out the design
 - [ ] Configure completion system
 
 ### Starship
-- [ ] Install Starship
-- [ ] Create base configuration
+- [*] Install Starship
+- [*] Create base configuration
 - [ ] Make themeable
 - [ ] Configure relevant modules (git, nix, etc.)
 
 ### CLI Tools
-- [ ] Install eza (ls replacement)
-- [ ] Install bat (cat replacement)
-- [ ] Install ripgrep
-- [ ] Install fd
-- [ ] Install zoxide
-- [ ] Install fzf
-- [ ] Install btop
-- [ ] Install dust
+- [*] Install eza (ls replacement)
+- [*] Install bat (cat replacement)
+- [*] Install ripgrep
+- [*] Install fd
+- [*] Install zoxide
+- [*] Install fzf
+- [*] Install btop
+- [*] Install dust
 - [ ] Configure shell aliases for modern tools
 
 ## File Management
 
 ### Thunar
-- [ ] Install Thunar
+- [*] Install Thunar
 - [ ] Configure default file associations
 - [ ] Make themeable (GTK)
 - [ ] Set up thumbnail generation
 - [ ] Configure keybinding (Super+E)
 
 ### Yazi
-- [ ] Install Yazi
+- [*] Install Yazi
 - [ ] Create base configuration
 - [ ] Make themeable
 - [ ] Configure keybindings
@@ -193,16 +191,16 @@ For now, the README is just so I can lay out the design
 ## Development Environment
 
 ### NixVim
-- [ ] Set up NixVim flake input
-- [ ] Create base NixVim configuration
+- [*] Set up NixVim flake input
+- [*] Create base NixVim configuration
 - [ ] Configure LSP for Rust (rust-analyzer)
 - [ ] Configure LSP for Python (pyright)
-- [ ] Set up Tree-sitter
-- [ ] Configure Telescope (fuzzy finder)
-- [ ] Set up file explorer (Neo-tree or nvim-tree)
-- [ ] Configure Git integration (Gitsigns, Fugitive)
-- [ ] Set up auto-completion (nvim-cmp)
-- [ ] Configure snippets
+- [*] Set up Tree-sitter
+- [*] Configure Telescope (fuzzy finder)
+- [*] Set up file explorer (Neo-tree or nvim-tree)
+- [*] Configure Git integration (Gitsigns, Fugitive)
+- [*] Set up auto-completion (nvim-cmp)
+- [*] Configure snippets
 - [ ] Make themeable
 - [ ] Set up custom keybindings
 - [ ] Configure cyberpunk aesthetic
@@ -317,16 +315,16 @@ For now, the README is just so I can lay out the design
 
 ### Window Management
 - [ ] Configure Ctrl+C/V universal clipboard
-- [ ] Set up Super+HJKL window focus
+- [*] Set up Super+HJKL window focus
 - [ ] Set up Super+Shift+HJKL window movement
-- [ ] Configure Super+Q close window
-- [ ] Configure Super+F fullscreen toggle
-- [ ] Configure Super+V floating toggle
+- [*] Configure Super+Q close window
+- [*] Configure Super+F fullscreen toggle
+- [*] Configure Super+V floating toggle
 
 ### Workspaces
-- [ ] Set up Super+[1-9] workspace switching
-- [ ] Set up Super+Shift+[1-9] move to workspace
-- [ ] Configure Super+Tab window switcher
+- [*] Set up Super+[1-9] workspace switching
+- [*] Set up Super+Shift+[1-9] move to workspace
+- [*] Configure Super+Tab window switcher
 
 ### Launchers
 - [ ] Configure Super+Return terminal
