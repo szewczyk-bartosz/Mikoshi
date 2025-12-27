@@ -6,6 +6,4 @@ let
 in 
 {
   imports = [ ./hyprland.nix ./kitty.nix];
-
-  _module.args.selectedTheme = selectedTheme;
 }

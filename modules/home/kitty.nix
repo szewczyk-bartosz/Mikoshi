@@ -1,4 +1,8 @@
-{ selectedTheme, ... }:
+{ config, ... }:
+let
+  themes = import ../../themes;
+  selectedTheme = themes.${config.mikoshi.theme};
+in
 {
   programs.kitty = {
     enable = true;

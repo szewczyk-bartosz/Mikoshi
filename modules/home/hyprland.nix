@@ -1,6 +1,8 @@
-{ selectedTheme, ... }:
+{ config, ... }:
 let
   workspaces = builtins.genList (x: x) 10;
+  themes = import ../../themes;
+  selectedTheme = themes.${config.mikoshi.theme};
 in 
 {
   wayland.windowManager.hyprland = {
