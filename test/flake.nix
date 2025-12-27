@@ -22,7 +22,7 @@
         ./configuration.nix
         ./hardware-configuration.nix
         {
-          mikoshi.theme = "akasara";
+          mikoshi.theme = "sane";
 	  home-manager.users.cheryllamb = {
 	    imports = [ mikoshi.homeManagerModules.default ];
 	    home.stateVersion = "26.05";

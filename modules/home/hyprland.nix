@@ -3,7 +3,7 @@ let
   workspaces = builtins.genList (x: x) 10;
   themes = import ../../themes;
   selectedTheme = themes.${config.mikoshi.theme};
-in 
+in
 {
   wayland.windowManager.hyprland = {
     enable = true;
@@ -17,7 +17,7 @@ in
         "$mainMod, K, movefocus, u"
         "$mainMod, L, movefocus, r"
         "$mainMod SHIFT, H, movewindow, l"
-        "$mainMod SHIFT, J, movewindow, d"
+
         "$mainMod SHIFT, K, movewindow, u"
         "$mainMod SHIFT, L, movewindow, r"
         "$mainMod, F, fullscreen"
@@ -27,7 +27,7 @@ in
         # file explorer
         "$mainMod, E, exec, thunar"
         # lock screen
-        "$mainMod, L, exec, hyprlock"
+        "CTRL, L, exec, hyprlock"
         # reload config
         "$mainMod SHIFT, R, exec, hyprctl reload"
         # window switcher
@@ -43,7 +43,7 @@ in
         "$mainMod" = "ALT";
         "col.active_border" = "rgb(${builtins.substring 1 (-1) selectedTheme.colours.primary})";
         "col.inactive_border" = "rgb(${builtins.substring 1 (-1) selectedTheme.colours.secondary})";
-	"exec-once" = "waybar";
+        "exec-once" = "waybar";
       };
     };
   };

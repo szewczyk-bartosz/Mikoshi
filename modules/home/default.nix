@@ -3,6 +3,7 @@
 {
   imports = [
     ./waybar.nix
+    ./brave.nix
     ./hyprland.nix
     ./kitty.nix
     ./nixvim

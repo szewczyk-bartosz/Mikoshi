@@ -6,10 +6,8 @@
     xfce.thunar
     xfce.thunar-archive-plugin
     xfce.thunar-volman
-    xfce.tumbler  # Thumbnail support
-    ffmpegthumbnailer  # Video thumbnails
+    xfce.tumbler # Thumbnail support
+    ffmpegthumbnailer # Video thumbnails
   ];
 
-  # Enable thumbnail generation
-  services.tumbler.enable = true;
 }
