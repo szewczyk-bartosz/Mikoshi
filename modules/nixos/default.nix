@@ -1,11 +1,6 @@
 { lib, pkgs, config, home-manager, ... }:
 
 {
-  options = {
-    mikoshi.username = lib.mkOption { default = "cheryllamb"; type = lib.types.str; };
-    mikoshi.hostname = lib.mkOption { default = "m1k1"; type = lib.types.str; };
-    mikoshi.theme = lib.mkOption { default = "akasara"; type = lib.types.str; };
-  };
 
   config = {
     programs.hyprland.enable = true;
