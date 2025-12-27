@@ -20,8 +20,6 @@
     ./grimblast.nix
     ./copyq.nix
     ./swww.nix
-    ./zsh.nix
-    ./starship.nix
     ./gtk.nix
   ];
 }
