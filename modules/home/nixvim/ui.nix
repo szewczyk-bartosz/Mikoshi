@@ -115,39 +115,70 @@ in
             '';
           };
           highlights = {
+            # Main buffer/tab
             buffer_selected = {
-              fg = "${selectedTheme.colours.fg}";
+              fg = "${selectedTheme.colours.onPrimary}";
               bg = "${selectedTheme.colours.primary}";
               bold = true;
               italic = false;
             };
+            tab_selected = {
+              fg = "${selectedTheme.colours.onPrimary}";
+              bg = "${selectedTheme.colours.primary}";
+              bold = true;
+            };
+
+            # Numbers and diagnostics
             numbers_selected = {
-              fg = "${selectedTheme.colours.fg}";
+              fg = "${selectedTheme.colours.onPrimary}";
               bg = "${selectedTheme.colours.primary}";
               bold = true;
             };
             diagnostic_selected = {
-              fg = "${selectedTheme.colours.fg}";
+              fg = "${selectedTheme.colours.onPrimary}";
               bg = "${selectedTheme.colours.primary}";
               bold = true;
             };
             hint_selected = {
-              fg = "${selectedTheme.colours.fg}";
+              fg = "${selectedTheme.colours.onPrimary}";
               bg = "${selectedTheme.colours.primary}";
               bold = true;
             };
             info_selected = {
-              fg = "${selectedTheme.colours.fg}";
+              fg = "${selectedTheme.colours.onPrimary}";
               bg = "${selectedTheme.colours.primary}";
               bold = true;
             };
             warning_selected = {
-              fg = "${selectedTheme.colours.fg}";
+              fg = "${selectedTheme.colours.onPrimary}";
               bg = "${selectedTheme.colours.primary}";
               bold = true;
             };
             error_selected = {
-              fg = "${selectedTheme.colours.fg}";
+              fg = "${selectedTheme.colours.onPrimary}";
+              bg = "${selectedTheme.colours.primary}";
+              bold = true;
+            };
+
+            # UI elements
+            separator_selected = {
+              fg = "${selectedTheme.colours.primary}";
+              bg = "${selectedTheme.colours.primary}";
+            };
+            close_button_selected = {
+              fg = "${selectedTheme.colours.onPrimary}";
+              bg = "${selectedTheme.colours.primary}";
+            };
+            modified_selected = {
+              fg = "${selectedTheme.colours.onPrimary}";
+              bg = "${selectedTheme.colours.primary}";
+            };
+            duplicate_selected = {
+              fg = "${selectedTheme.colours.onPrimary}";
+              bg = "${selectedTheme.colours.primary}";
+            };
+            pick_selected = {
+              fg = "${selectedTheme.colours.onPrimary}";
               bg = "${selectedTheme.colours.primary}";
               bold = true;
             };

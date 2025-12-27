@@ -23,6 +23,14 @@
     selection = "#264f78";
     hover = "#2a2d2e";
 
+    # Contrasting text colors for use on accent backgrounds
+    onPrimary = "#1e1e1e";      # Dark text on light blue
+    onSecondary = "#1e1e1e";    # Dark text on teal
+    onTertiary = "#1e1e1e";     # Dark text on purple
+    onSuccess = "#1e1e1e";      # Dark text on teal/green
+    onWarning = "#1e1e1e";      # Dark text on yellow
+    onError = "#ffffff";        # Light text on red
+
     terminal = {
       black = "#000000";
       red = "#cd3131";

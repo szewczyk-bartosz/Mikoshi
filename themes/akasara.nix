@@ -22,6 +22,14 @@
     border = "#FF00FF"; #TEST
     selection = "#FFFF0088"; #TEST
     hover = "#00FFFF88"; #TEST
+
+    # Contrasting text colors for use on accent backgrounds
+    onPrimary = "#000000"; #TEST
+    onSecondary = "#000000"; #TEST
+    onTertiary = "#000000"; #TEST
+    onSuccess = "#000000"; #TEST
+    onWarning = "#000000"; #TEST
+    onError = "#FFFFFF"; #TEST
     
     terminal = {
       black = "#000000"; #TEST
